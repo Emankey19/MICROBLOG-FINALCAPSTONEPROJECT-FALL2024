@@ -1,27 +1,75 @@
-/* Fullscreen video background */
-#videoBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.7);
+/* Login Form Styling */
+.card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)); /* Transparent gradient */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    max-width: 400px;
+    margin: auto;
+    color: #333; /* Dark text for contrast */
 }
 
-/* Overlay for centering form */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+.card h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff9a9e; /* Match gradient colors */
+    margin-bottom: 1rem;
 }
+
+.card p {
+    font-size: 1rem;
+    color: #666; /* Subtle gray for secondary text */
+    margin-bottom: 1.5rem;
+}
+
+.card .form-label {
+    font-weight: bold;
+    color: #ff9a9e; /* Match gradient color */
+}
+
+.card .form-control {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+    border: 1px solid #fad0c4; /* Subtle border to match gradient */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card .form-control:focus {
+    border-color: #fbc2eb; /* Highlight color for inputs */
+    box-shadow: 0 0 8px rgba(251, 194, 235, 0.6); /* Subtle glow effect */
+}
+
+.card .btn-primary {
+    background-color: #ff9a9e; /* Match gradient color */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card .btn-primary:hover {
+    background-color: #fbc2eb; /* Hover effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card a {
+    color: #a1c4fd; /* Gradient color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
 
 /* Card Styling */
 .card {
@@ -50,4 +98,55 @@ h3 {
 
 .navbar {
     margin-bottom: 20px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Card Style */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: auto;
 }

@@ -1,7 +1,8 @@
-Microblog Project
+## Microblog Project
+
 🦋 Butterfly: A lightweight microblogging platform where users can share brief messages and connect with others.
 
-Table of Contents
+## Table of Contents
 Project Overview
 Features
 Technologies Used
@@ -19,7 +20,8 @@ View and interact with posts from all users.
 Edit their profile information.
 The project is connected to a backend server powered by Node.js and MongoDB for seamless data storage and retrieval.
 
-Features
+## Features
+
 User Authentication:
 
 Register and log in with secure credentials.
@@ -36,10 +38,6 @@ View Gravatar-based profile icons.
 Responsive Design:
 
 Fully responsive user interface using Bootstrap.
-Video Background:
-
-Engaging login page with a semi-transparent form over a video background.
-Technologies Used
 Frontend:
 HTML5
 CSS3 (Bootstrap for styling)
@@ -88,9 +86,9 @@ Like or Delete Posts:
 Like/unlike posts or delete posts you authored.
 Update Profile:
 Add a bio or update your password from the profile page.
-File Structure
-lua
-Copier le code
+
+## File Structure
+
 microblog-lite/
 │-- assets/
 │   └-- background.mp4       # Video file for the login page background
@@ -103,7 +101,8 @@ microblog-lite/
 │-- landing.js               # Logic for the login page
 │-- posts.js                 # Logic for the posts page
 │-- profile.js               # Logic for the profile page
-Future Enhancements
+
+## Future Enhancements
 Add comments on posts.
 Allow users to follow/unfollow others.
 Implement notifications for likes or replies.
@@ -112,5 +111,5 @@ Deploy the project to a cloud platform (e.g., AWS, Heroku).
 Contributing
 Feel free to submit pull requests or issues if you find bugs or want to suggest enhancements. Contributions are always welcome!
 
-License
+## License
 This project is licensed under the MIT License.

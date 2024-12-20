@@ -3,7 +3,7 @@
 🦋 Butterfly: A lightweight microblogging platform where users can share brief messages and connect with others.
 
 ## Homepage screenshot 
-![HomePage](microblog-lite/assets/homepage.png)
+![HomePage](C:\Users\student\MICROBLOG-FINALCAPSTONEPROJECT-FALL2024\microblog-lite\assets\homepage.png)
 
 ## Table of Contents
 Project Overview

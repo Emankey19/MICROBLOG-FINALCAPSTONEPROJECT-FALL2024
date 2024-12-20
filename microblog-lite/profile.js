@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    enforceAuth();
-    fetchProfile();
+    enforceAuth(); // Ensure the user is logged in
+    fetchProfile(); // Fetch and display profile info
     document.getElementById("updateProfileForm").addEventListener("submit", updateProfile);
     document.getElementById("newPostForm").addEventListener("submit", createPost);
 });
@@ -20,10 +20,10 @@ function fetchProfile() {
             <img src="https://www.gravatar.com/avatar/${md5(user.username)}" alt="Profile Icon" width="100" />
         `;
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error("Error fetching profile:", err));
 }
 
-// Update profile
+// Update user profile
 function updateProfile(e) {
     e.preventDefault();
     const bio = document.getElementById("bio").value;
@@ -33,15 +33,15 @@ function updateProfile(e) {
         method: "PUT",
         headers: { 
             "Content-Type": "application/json",
-            Authorization: `Bearer ${getLoginData().token}`
+            Authorization: `Bearer ${getLoginData().token}`,
         },
         body: JSON.stringify({ bio, password }),
     })
     .then(() => {
         alert("Profile updated successfully!");
-        fetchProfile();
+        fetchProfile(); // Refresh profile info
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error("Error updating profile:", err));
 }
 
 // Create a new post
@@ -59,7 +59,7 @@ function createPost(e) {
     })
     .then(() => {
         alert("Post created successfully!");
-        document.getElementById("postContent").value = "";
+        document.getElementById("postContent").value = ""; // Clear the input field
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error("Error creating post:", err));
 }

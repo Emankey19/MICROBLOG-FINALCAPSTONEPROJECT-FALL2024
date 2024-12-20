@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("newPostForm").addEventListener("submit", createPost);
 });
 
-// Fetch and display user profile
 function fetchProfile() {
     const { username } = getLoginData();
 
@@ -39,12 +38,11 @@ function updateProfile(e) {
     })
     .then(() => {
         alert("Profile updated successfully!");
-        fetchProfile(); // Refresh profile info
+        fetchProfile(); 
     })
     .catch(err => console.error("Error updating profile:", err));
 }
 
-// Create a new post
 function createPost(e) {
     e.preventDefault();
     const postContent = document.getElementById("postContent").value;
@@ -59,7 +57,7 @@ function createPost(e) {
     })
     .then(() => {
         alert("Post created successfully!");
-        document.getElementById("postContent").value = ""; // Clear the input field
+        document.getElementById("postContent").value = ""; 
     })
     .catch(err => console.error("Error creating post:", err));
 }
